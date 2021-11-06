@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
 import StoryblokService from '../utils/storyblok-service'
  
-export default class Index extends React.Component {
+export default class PageTemplate extends React.Component {
   state = {
     story: {
        content: this.props.data.story ? JSON.parse(this.props.data.story.content) : {}
@@ -31,10 +31,11 @@ export default class Index extends React.Component {
     )
   }
 }
+
  
 export const query = graphql`
-  {
-    story: storyblokEntry(full_slug: { eq: "home" }) {
+  query storyBySlug($fullSlug: String!) {
+    story: storyblokEntry(full_slug: { eq: $fullSlug }) {
       name
       content
       full_slug
