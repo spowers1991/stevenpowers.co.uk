@@ -31,7 +31,7 @@ export const onInitialClientRender = () => {
           modals[i].classList.add("opacity-0", "scale-0");
           modals[i].classList.remove("opacity-100", "scale-100");
           icons[i].classList.remove("opacity-0");
-          icons[i].classList.add("opacity-1000");
+          icons[i].classList.add("opacity-100");
         }
       }
   }
@@ -41,7 +41,7 @@ export const onInitialClientRender = () => {
       modals[i].classList.add("opacity-0", "scale-0");
       modals[i].classList.remove("opacity-100", "scale-100");
       icons[i].classList.remove("opacity-0");
-      icons[i].classList.add("opacity-1000");
+      icons[i].classList.add("opacity-100");
     }
   }
 
