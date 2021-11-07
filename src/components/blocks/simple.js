@@ -9,7 +9,7 @@ const Simple = ({ blok }) => {
                 <h1 className="text-6xl lg:text-8xl font-bold font-inter mb-3">
                     {blok.title}
                 </h1>
-                <p className="lead text-grey text-sm lg:text-xl font-medium">
+                <p className="lead text-grey text-sm lg:text-base font-medium max-w-4xl">
                     {blok.content}
                 </p>
             </div>      

@@ -1,21 +1,48 @@
   // ./gatsby-browser.js
   import './src/styles/global.css';
 
-const $ = require("jquery")
 
 export const onInitialClientRender = () => {
-  $(document).ready(function () {
-    $( ".icon" ).on('click', function() {
-      $(this).removeClass('w-3/4 lg:m-0 mx-auto md-mx-0');
-      $(this).addClass('fixed top-0 left-0 right-0 bottom-0 m-auto md:m-auto lg:mx-auto sm:w-1/3');
-      $('.backdrop').removeClass('hidden pointer-events-none');
-     });
-     $(document).on('click', function (e) {
-        if ($(e.target).closest(".icon").length === 0) {
-          $('.icon').removeClass('fixed top-0 left-0 right-0 bottom-0 m-auto md:m-auto lg:mx-auto sm:w-1/3');
-          $('.icon').addClass('w-3/4 lg:m-0 mx-auto md-mx-0');
-          $('.backdrop').addClass('hidden pointer-events-all');
+
+  var icons =  Array.prototype.slice.call(document.getElementsByClassName('icon'));
+  var modals = Array.prototype.slice.call(document.getElementsByClassName('modal'));
+  var closeButtons = document.querySelectorAll('.close-btn');
+  var backdrop = document.querySelector('.backdrop');
+
+  console.log(closeButtons);
+
+  for (var i = 0; i < icons.length; i++) {    
+     var icon = icons[i];
+     var closeButton = closeButtons[i];
+     icon.onclick = function () {
+      var currentIndex = icons.indexOf(this);
+      for (var i = 0; i < icons.length; i++) { 
+        modals[i].classList.add("opacity-0");
+      }
+      icons[currentIndex].classList.add("opacity-0");
+      modals[currentIndex].classList.remove("opacity-0", "scale-0");
+      modals[currentIndex].classList.add("scale-100", "opacity-100");
+      backdrop.classList.remove("hidden", "pointer-events-none");
+      backdrop.classList.add("pointer-events-all");
+     }
+      closeButton.onclick = function () {
+        backdrop.classList.add("hidden");
+        for (var i = 0; i < icons.length; i++) { 
+          modals[i].classList.add("opacity-0", "scale-0");
+          modals[i].classList.remove("opacity-100", "scale-100");
+          icons[i].classList.remove("opacity-0");
+          icons[i].classList.add("opacity-1000");
         }
-    });
-  });
+      }
+  }
+  backdrop.onclick = function () {
+    backdrop.classList.add("hidden");
+    for (var i = 0; i < icons.length; i++) { 
+      modals[i].classList.add("opacity-0", "scale-0");
+      modals[i].classList.remove("opacity-100", "scale-100");
+      icons[i].classList.remove("opacity-0");
+      icons[i].classList.add("opacity-1000");
+    }
+  }
+
 }
