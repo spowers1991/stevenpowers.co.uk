@@ -1,4 +1,6 @@
 import * as React from "react"
+import SbEditable from 'storyblok-react'
+import RichText from 'src/utils/RichText'
  
 const Teaser = ({ blok }) => (
     <div>

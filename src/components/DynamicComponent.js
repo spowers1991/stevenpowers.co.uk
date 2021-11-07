@@ -6,9 +6,13 @@ import React from "react"
 ///////////////////
 //Blocks
 import Simple from '../components/blocks/simple'
+import SplitWithImage from '../components/blocks/SplitWithImage'
+import IconGrid from '../components/blocks/IconGrid'
  
 const Components = {
   'simple': Simple,
+  "split-with-image": SplitWithImage,
+  "icon-grid": IconGrid
 }
  
 const DynamicComponent = ({ blok }) => {

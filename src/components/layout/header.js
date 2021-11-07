@@ -7,6 +7,7 @@ const Header = () => {
     <header>
         <Helmet>
             <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
         </Helmet>
         <nav className="flex items-center justify-between flex-wrap font-inter mt-3 mb-14">
             <div className="block ml-auto pr-10">
