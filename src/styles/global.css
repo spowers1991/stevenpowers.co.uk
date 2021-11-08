@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background: #f9f9f9;
+}
+
+@media only screen and (min-width: 600px) {
+    .modal {
+        height: fit-content !important;
+    }
+    .modal img {
+        max-height: 200px;
+    }
+}
