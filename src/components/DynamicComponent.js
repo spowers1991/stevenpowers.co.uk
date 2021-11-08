@@ -1,4 +1,3 @@
-import SbEditable from 'storyblok-react'
 import Placeholder from "./Placeholder";
 import React from "react"
 

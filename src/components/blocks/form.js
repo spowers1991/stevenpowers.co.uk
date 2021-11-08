@@ -1,12 +1,12 @@
 import React from 'react'
 import SbEditable from 'storyblok-react'
-//import RichText from 'src/utils/RichText'
 
 const Form = ({ blok }) => {
     return (
         <SbEditable content={blok} key={blok._uid}>
             <div className="container mx-auto font-inter mt-10">
-                <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" name="contact" method="POST" data-netlify="true">
+                <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" name="contact" method="POST" data-netlify="true" onSubmit={handleFormSubmit}>
+                <input type="hidden" name="contact" value="contact" />
                     <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Name
@@ -36,5 +36,24 @@ const Form = ({ blok }) => {
         </SbEditable>
     )
 }
+
+const encode = (data) => {
+    return Object.keys(data).map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join('&');
+ }
+
+ function handleFormSubmit(event) {
+    event.preventDefault();
+    const data = [...event.target.elements].filter(element => Boolean(element.name)).reduce((json, element) => {
+       json[element.name] = element.value;
+       return json;
+    }, {});
+    fetch(event.target.action, {
+       method: "POST",
+       headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+       },
+       body: encode(data),
+    }).then(() => alert("Success!")).catch(error => alert(error));
+ }
 
 export default Form
