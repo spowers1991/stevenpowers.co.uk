@@ -27,7 +27,7 @@ const Form = ({ blok }) => {
                         <p className="text-red-500 text-xs italic"></p>
                         </div>
                         <div className="flex items-center justify-between">
-                        <button className="bg-black text-white font-bold px-5 py-3 lg:py-3 focus:outline-none uppercase" type="button">
+                        <button className="bg-black text-white font-bold px-5 py-3 lg:py-3 focus:outline-none uppercase" type="submit">
                             Send
                         </button>
                     </div>
