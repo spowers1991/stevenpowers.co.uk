@@ -7,10 +7,14 @@ import React from "react"
 //Blocks
 import Simple from '../components/blocks/simple'
 import IconGrid from '../components/blocks/IconGrid'
+import Text from '../components/blocks/text'
+import Form from '../components/blocks/form'
  
 const Components = {
   'simple': Simple,
-  "icon-grid": IconGrid
+  "icon-grid": IconGrid,
+  "text": Text,
+  "form": Form
 }
  
 const DynamicComponent = ({ blok }) => {

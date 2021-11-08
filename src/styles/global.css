@@ -15,3 +15,7 @@ body {
         max-height: 200px;
     }
 }
+
+.button-bar {
+    transition: .1s;
+}

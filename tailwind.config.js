@@ -8,12 +8,17 @@ module.exports = {
       },
       colors: {
         grey: '#bbbbbb',
-        lightgrey: '#f8f8f8'
+        lightgrey: '#f8f8f8',
+        red: '#ff4d4d',
+        blue: 'skyblue'
       }
     },
   },
   variants: {
     extend: {},
+    width: ["responsive", "hover", "focus", "group-hover"],
+    height: ["responsive", "hover", "focus"],
+    transform: ["responsive", "hover", "focus", "group-hover"]
   },
   plugins: [
     {
