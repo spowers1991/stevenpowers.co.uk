@@ -11,22 +11,22 @@ const Form = ({ blok }) => {
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Name
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your full name"/>
-                        </div>
-                        <div className="mb-6">
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your full name" name="fullname"/>
+                    </div>
+                    <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
                             email
                         </label>
-                        <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="example@gmail.co.uk"/>
-                        </div>
-                        <div className="mb-4">
+                        <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="example@gmail.co.uk" name="email" />
+                    </div>
+                    <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="message">
                             Message
                         </label>
-                        <textarea className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="message" type="textarea" placeholder="..."/>
+                        <textarea className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="message" type="textarea" name="message" placeholder="..."/>
                         <p className="text-red-500 text-xs italic"></p>
-                        </div>
-                        <div className="flex items-center justify-between">
+                    </div>
+                    <div className="flex items-center justify-between">
                         <button className="bg-black text-white font-bold px-5 py-3 lg:py-3 focus:outline-none uppercase" type="submit">
                             Send
                         </button>
