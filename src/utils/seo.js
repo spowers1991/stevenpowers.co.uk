@@ -37,19 +37,19 @@ const Seo = ({ description, lang, meta, title }) => {
       meta={[
         {
           name: `title`,
-          content: title,
+          content: 'Steven Powers',
         },
         {
           name: `description`,
-          content: metaDescription,
+          content: 'I am Steven Powers, a professional Web Developer. I am currently very happily working for a successful agency in Mirfield, West Yorkshire in the United Kingdom.',
         },
         {
           property: `og:title`,
-          content: title,
+          content: 'I am Steven Powers, a professional Web Developer. I am currently very happily working for a successful agency in Mirfield, West Yorkshire in the United Kingdom.',
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: 'I am Steven Powers, a professional Web Developer. I am currently very happily working for a successful agency in Mirfield, West Yorkshire in the United Kingdom.',
         },
         {
           property: `og:type`,
@@ -57,7 +57,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: 'I am Steven Powers, a professional Web Developer. I am currently very happily working for a successful agency in Mirfield, West Yorkshire in the United Kingdom.',
         },
         {
           name: `twitter:creator`,
@@ -65,11 +65,11 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: 'Steven Powers',
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: 'I am Steven Powers, a professional Web Developer. I am currently very happily working for a successful agency in Mirfield, West Yorkshire in the United Kingdom.',
         },
       ].concat(meta)}
     />
