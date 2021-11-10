@@ -24,7 +24,7 @@ const Header = () => {
                 </div>
             </div>
         </nav>
-        <form className="bg-white shadow-md  px-8 pt-6 pb-8 mb-4 hidden" name="contact" method="POST" data-netlify="true" onSubmit={handleFormSubmit}>
+        <form className="bg-white shadow-md  px-8 pt-6 pb-8 mb-4 hidden" name="contact" method="POST" data-netlify="true">
                 <input type="hidden" name="contact" value="contact" />
                     <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
