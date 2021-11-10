@@ -5,7 +5,7 @@ const Form = ({ blok }) => {
     return (
         <SbEditable content={blok} key={blok._uid}>
             <div className="container mx-auto font-inter mt-10">
-                <form className="bg-white shadow-md  px-8 pt-6 pb-8 mb-4" name="contact" method="POST" data-netlify="true" onSubmit={handleFormSubmit}>
+                <form className="bg-white shadow-md  px-8 pt-6 pb-8 mb-4" name="contact" method="POST" onSubmit={handleFormSubmit}>
                 <input type="hidden" name="contact" value="contact" />
                     <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
