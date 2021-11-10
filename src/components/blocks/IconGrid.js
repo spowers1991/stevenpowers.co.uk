@@ -22,14 +22,14 @@ const IconGrid = ({ blok }) => {
                                     </div>
                                     <img className="h-1/4 lg:h-1/2 w-full lg:m-0 m-auto" src={item.image.filename} />
                                     <div className="pt-5 px-5 m-auto">
-                                        <h3 className="text-4xl font-bold font-inter mb-5 border-dashed pb-4 border-b-4 border-light-blue-500 ">
+                                        <h3 className="text-2xl lg:text-4xl font-bold font-inter mb-5 border-dashed pb-4 border-b-4 border-light-blue-500 ">
                                             {item.title}
                                         </h3>
                                         <p className="text-sm lg:text-base">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                         </p>
                                         <a href={`${item.external_Link}`} target="_blank">
-                                            <div className="bg-black text-white p-2 lg:p-5 mt-5 text-center font-inter font-bold uppercase mb-5 relative group">
+                                            <div className="bg-black text-white p-2 lg:p-5 mt-5 text-center font-inter font-bold uppercase mb-5 relative group text-sm lg:text-base">
                                                 View docs
                                                 <div class="button-bar absolute bottom-0 left-0 right-0 m-auto w-10 max-w-full bg-blue h-1 transform group-hover:w-full transition transition-gpu duration-200"></div>
                                             </div>
