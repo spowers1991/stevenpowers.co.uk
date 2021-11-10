@@ -3,12 +3,20 @@
 
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
-  if(location.pathname === '/contact'){
-    document.querySelector('#contact-link .button-bar').classList.add('active');
-    document.querySelector('#home-link .button-bar').classList.remove('active');
+  if(location.pathname === '/'){
+    var menuClass = location.pathname;
+    var otherMenuLinks = document.querySelectorAll('.menu-link .button-bar');
+    for (var i = 0; i < otherMenuLinks.length; i++) {
+      otherMenuLinks[i].classList.remove('active');
+    }
+    document.querySelector('#home-link .button-bar').classList.add('active');
   }
   else {
-    document.querySelector('#home-link .button-bar').classList.add('active');
-    document.querySelector('#contact-link .button-bar').classList.remove('active');
+    var menuClass = location.pathname.replace('/', '');
+    var otherMenuLinks = document.querySelectorAll('.menu-link .button-bar');
+    for (var i = 0; i < otherMenuLinks.length; i++) {
+      otherMenuLinks[i].classList.remove('active');
+    }
+    document.querySelector('#'+menuClass+'-link .button-bar').classList.add('active');
   }
 }
