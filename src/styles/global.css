@@ -19,3 +19,7 @@ body {
 .button-bar {
     transition: .1s;
 }
+
+.menu-link .button-bar.active {
+    width: 100%;
+}
