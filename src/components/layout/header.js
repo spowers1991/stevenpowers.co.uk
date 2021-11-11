@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 
 const Header = () => {
   return (    
-    <header className="container m-auto">
+    <header className="container m-auto px-5">
         <Helmet>
             <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />

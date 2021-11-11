@@ -1,5 +1,6 @@
 import React from "react"
 import Header from './layout/header'
+import Footer from './layout/footer'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from "gatsby"
 import StoryblokService from '../utils/storyblok-service'
@@ -22,7 +23,7 @@ export default function Layout({ children, location, isEditor }){
   //let parsedSetting = Object.assign({}, content, {content: content})
 
   return (
-    <div className="px-5">
+    <div>
       { isEditor ? 
         (<>
         <Helmet
@@ -45,10 +46,10 @@ export default function Layout({ children, location, isEditor }){
         <script src="https://kit.fontawesome.com/b1c70f5e3d.js" crossorigin="anonymous"></script>
       </Helmet>
       <Header></Header>
-      <main>
+      <main className="px-5">
         {children}
       </main>
-      
+      <Footer></Footer>
     </div>
   )
 }
